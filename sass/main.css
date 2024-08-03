@@ -1,0 +1,1810 @@
+@font-face {
+  font-family: "Acumin Pro";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acumin Pro"), url("../assets/fontfamily/Acumin-RPro.woff") format("woff");
+}
+@font-face {
+  font-family: "Acumin Pro Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acumin Pro Italic"), url("../assets/fontfamily/Acumin-ItPro.woff") format("woff");
+}
+@font-face {
+  font-family: "Acumin Pro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acumin Pro Bold"), url("../assets/fontfamily/Acumin-BdPro.woff") format("woff");
+}
+@font-face {
+  font-family: "Segoe Script Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe Script Regular"), url("../assets/fontfamily/Segoe Script.woff") format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+.clearfix ::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+.main-header {
+  background-color: #192836;
+  text-align: right;
+  content: "";
+  clear: both;
+  display: block;
+}
+.main-header .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 576px) {
+  .main-header .container {
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .main-header .container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .main-header .container {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .main-header .container {
+    width: 1140px;
+  }
+}
+.main-header .Logo {
+  position: absolute;
+  left: 0;
+  margin-top: calc(4rem - 11px);
+}
+.main-header__menu-small-screen {
+  display: none !important;
+  content: "";
+  clear: both;
+  display: block;
+  height: 8rem;
+  position: relative;
+}
+.main-header__menu-small-screen img {
+  position: absolute;
+  left: 10% !important;
+}
+.main-header__menu-small-screen svg {
+  position: absolute;
+  right: 10%;
+  height: 50%;
+  fill: #fff;
+  margin-top: 2rem;
+}
+.main-header__nav {
+  display: inline-block;
+}
+.main-header__nav ul li {
+  padding: 2.98rem 0;
+  display: inline-block;
+  margin-right: 3rem;
+  transition: 0.3s;
+}
+.main-header__nav ul li a {
+  font-family: "Acumin Pro";
+  font-size: 1.7rem;
+  color: #fff;
+  letter-spacing: 0.068rem;
+  text-decoration: none;
+}
+.main-header__nav ul li:hover {
+  color: #ff5c70;
+  border-bottom: 0.1rem solid #ff5c70;
+  padding: 2.98rem 0 2.93rem 0;
+}
+.main-header__nav ul li .chevron-right-icon {
+  fill: #c4c4c4;
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+}
+.main-header__nav__sup {
+  background-color: #2a9664;
+  padding: 0.4rem 0.4rem 0.3rem;
+  border-radius: 0.2rem;
+  position: relative;
+  top: -0.3rem;
+  left: 0.1rem;
+  font-family: "Acumin Pro";
+  font-size: 0.9rem;
+  color: #fff;
+  letter-spacing: 0.072rem;
+}
+.main-header__en-eur {
+  display: inline-block;
+  margin: 1.93rem 0;
+  background-color: #1c2a38;
+  border: 0.1rem solid #ffebed;
+  position: relative;
+  border-radius: 0.4rem;
+  padding: 1.1rem 0.9rem 1.1rem 1rem;
+  font-family: "Acumin Pro";
+  font-size: 1.45rem;
+  color: #fff;
+  letter-spacing: 0.058rem;
+  z-index: 1;
+}
+.main-header__en-eur .sort-down-solid-icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  fill: #fff;
+  position: relative;
+  top: -0.4rem;
+}
+.main-header__en-eur__dropbox {
+  background-color: #1c2a38;
+  padding: 0.55rem 1rem;
+  width: calc(100% + 0.2rem);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border: 0.1rem solid #ffebed;
+  border-top: none;
+  display: none;
+}
+.main-header__en-eur__dropbox div {
+  font-family: "Acumin Pro";
+  font-size: 1.45rem;
+  color: #fff;
+  letter-spacing: 0.058rem;
+  padding: 0.55rem 0;
+}
+.main-header__en-eur__dropbox hr {
+  position: relative;
+  left: 5%;
+  width: 90%;
+  margin: 0.55rem 0;
+  border: none;
+  padding: 0.05rem;
+  background-color: #707e8c;
+}
+.main-header__en-eur:hover .main-header__en-eur__dropbox {
+  display: block;
+}
+.main-header .Sign-in-or-Register {
+  display: inline-block;
+  margin: 3.16rem 1.5rem;
+}
+.main-header .Sign-in-or-Register a {
+  transition: 0.2s;
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 0.056rem;
+  text-decoration: none;
+}
+.main-header .Sign-in-or-Register:hover a {
+  color: #ff5c70;
+}
+.main-header__add-a-listing {
+  border: 0.1rem solid #ff5c70;
+  border-radius: 0.4rem;
+  background-color: #192836;
+  color: #ff5c70 !important;
+  cursor: pointer;
+  padding: 1.7rem 2.2rem;
+  display: inline-block;
+  margin: 1.36rem 0px;
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 0.056rem;
+  transition: 0.25s;
+}
+.main-header__add-a-listing:hover {
+  border: 0.1rem solid #fff;
+  border-radius: 0.4rem;
+  color: #fff !important;
+  background-color: #ff5c70;
+  cursor: pointer;
+}
+.main-header__add-a-listing:hover .location-dot-solid-icon {
+  fill: #fff;
+}
+.main-header__add-a-listing .location-dot-solid-icon {
+  fill: #ff5c70;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+}
+.main-header__section {
+  height: 47rem;
+  background-image: linear-gradient(to bottom right, rgba(82, 82, 82, 0.7), rgba(22, 22, 22, 0.7)), url("../assets/img/HeaderBg/business-logistic-concept-import-export-concept.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+.main-header__section__txt {
+  position: relative;
+  top: 50%;
+  transform: translate(0, calc(-50% - 4.5rem));
+}
+.main-header__section .book-unforgettable {
+  font-family: "Acumin Pro Bold";
+  font-size: 4rem;
+  letter-spacing: 0.16rem;
+  margin-bottom: 3rem;
+}
+.main-header__section .join-dining {
+  font-family: "Acumin Pro";
+  font-size: 1.65rem;
+  color: #fff;
+  letter-spacing: 0.066rem;
+}
+.main-header__section .join-dining__experiances {
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 1.65rem;
+  font-family: "Acumin Pro Italic";
+}
+.main-header__section .join-dining__countries {
+  font-size: 1.65rem;
+  color: #ff5c70;
+}
+.main-header__section__icons {
+  position: absolute;
+  right: 4.6rem;
+  bottom: 8rem;
+}
+.main-header__section__icons__fc {
+  margin-top: 0px;
+}
+.main-header__section__icons ul li {
+  list-style: none;
+}
+.main-header__section__icons svg {
+  fill: #b7b7b7;
+  width: 2.6rem;
+  height: 2.6rem;
+  display: block;
+  margin-top: 3.1rem;
+  transition: 0.3s;
+}
+.main-header__section__icons .instagram:hover {
+  fill: rgb(228, 64, 95);
+}
+.main-header__section__icons .facebook:hover {
+  fill: rgb(59, 89, 153);
+}
+.main-header__section__icons .googleplus:hover {
+  fill: rgb(221, 75, 57);
+}
+.main-header__section__icons .twitter:hover {
+  fill: rgb(85, 172, 238);
+}
+
+.search {
+  border: solid 0.1rem #ffebed;
+  border-radius: 0.4rem;
+  padding: 4rem;
+  position: relative;
+  transform: translate(0, -50%);
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.search__flex-item {
+  margin-right: 1.5rem;
+}
+.search__flex-item label {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #192836;
+  letter-spacing: 0.056rem;
+  display: block;
+  margin-bottom: 2rem;
+}
+.search__flex-item input {
+  outline: none;
+  width: 100%;
+  border: 0.1rem solid #ff5c70;
+  border-radius: 0.4rem;
+  height: 6.4rem;
+  padding: 2.4rem;
+  opacity: 0.5;
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #707e8c;
+  letter-spacing: 0.056rem;
+}
+.search__flex-item input:focus {
+  background-color: rgba(255, 95, 111, 0.0901960784);
+}
+.search .waylf {
+  flex: 29%;
+  background: url("../assets/Icons/magnifying-glass-solid.svg") no-repeat;
+  background-size: 1.7rem;
+  background-position-y: 70%;
+  background-position-x: 90%;
+}
+.search .waya {
+  flex: 25%;
+  background: url("../assets/Icons/calendar.svg") no-repeat;
+  background-size: 1.7rem;
+  background-position-y: 70%;
+  background-position-x: 90%;
+  background: url("../assets/Icons/calendar.svg") no-repeat;
+  background-size: 1.7rem;
+  background-position-y: 70%;
+  background-position-x: 90%;
+}
+.search .hmgag {
+  flex: 25%;
+  background: url("../assets/Icons/workers-team.svg") no-repeat;
+  background-size: 1.7rem;
+  background-position-y: 70%;
+  background-position-x: 90%;
+  background-size: 2.5rem !important;
+}
+.search__btn {
+  flex: auto;
+  margin-top: 3.7rem;
+  font-family: "Acumin Pro";
+  font-size: 1.7rem;
+  letter-spacing: 0.068rem;
+  height: 6.4rem;
+  padding: 2.5rem 4rem;
+  border: 0.1rem solid #fff;
+  border-radius: 0.4rem;
+  color: #fff !important;
+  background-color: #ff5c70;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.search__btn:hover {
+  border: 0.1rem solid #ff5c70;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  color: #ff5c70 !important;
+  cursor: pointer;
+}
+
+.explore__txt {
+  font-size: 2.4rem;
+  letter-spacing: 0.048rem;
+  font-weight: bold;
+  font-family: "Acumin Pro";
+}
+.explore__txt span {
+  font-size: 2.4rem;
+  letter-spacing: 0.048rem;
+  font-weight: bold;
+  font-family: "Acumin Pro";
+  color: #ff5c70;
+}
+.explore__body {
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.explore__body__card {
+  display: flex;
+  flex: 48.6%;
+}
+.explore__body__card__txt {
+  border: 0.1rem solid rgba(255, 95, 111, 0.0901960784);
+  border-right: none;
+  background-color: rgba(255, 95, 111, 0.0901960784);
+  flex: 50%;
+  padding: 3.9rem 2.2rem;
+}
+.explore__body__card__txt__header {
+  font-family: "Acumin Pro";
+  font-size: 1.7rem;
+  color: #192836;
+  letter-spacing: 0.068rem;
+  margin: 2.9rem 0 2.4rem 0;
+}
+.explore__body__card__txt__body {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #707e8c;
+  letter-spacing: 0.056rem;
+  margin-bottom: 2rem;
+}
+.explore__body__card__txt a {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #ff5c70;
+  letter-spacing: 0.056rem;
+  text-decoration: none;
+}
+.explore__body__card__txt a:hover {
+  text-decoration: underline;
+}
+.explore__body__card__img {
+  position: relative;
+  flex: 50%;
+  background-color: linear-gradient(to bottom right, rgba(255, 95, 111, 0.0901960784), #fff);
+}
+.explore__body__card__img img {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+.explore__body__card__img__left-border {
+  height: 98%;
+  top: 0;
+  border-left: 1.6rem dotted white;
+  position: absolute;
+  transform: translate(-0.8rem, 1%);
+}
+.explore__body__card__img__right-border {
+  height: 98%;
+  right: 0;
+  top: 0px;
+  border-right: 1.6rem dotted white;
+  position: absolute;
+  transform: translate(0.8rem, 1%);
+}
+.explore__body .food-tours {
+  background-color: #fff;
+}
+
+.section-discover {
+  background-color: #faf5f5;
+  padding: 8rem 0;
+}
+.section-discover__header {
+  font-family: "Acumin Pro";
+  font-weight: bold;
+  font-size: 2.6rem;
+  letter-spacing: 0.104rem;
+  display: inline-block;
+}
+.section-discover__btns {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.section-discover__btn {
+  width: 3.3rem;
+  height: 3.3rem;
+  border: 0.1rem solid #ff5c70;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  color: #ff5c70 !important;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  position: relative;
+  transition: 0.15s;
+}
+.section-discover__btn img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.6rem;
+  height: 1.4rem;
+}
+.section-discover__btn:hover {
+  background-color: #ff5c70;
+}
+.section-discover__btn:active {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 0.15rem;
+  margin-right: 0.15rem;
+}
+.section-discover #section-discover__btn__right:active {
+  margin-left: 0.15rem;
+}
+.section-discover .swiperContainer {
+  overflow: hidden;
+  margin-top: 4rem;
+}
+.section-discover__body {
+  position: relative;
+}
+.section-discover__body__card {
+  background-color: #fff;
+  border-radius: 0.4rem;
+}
+.section-discover__body__card:hover .section-discover__body__card__txt {
+  color: #ff5c70;
+}
+.section-discover__body__card__img img {
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  width: 100%;
+}
+.section-discover__body__card__header__header {
+  margin: 3rem 1.5rem 2rem 2rem;
+  display: inline-block;
+  font-weight: normal;
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #ef233c;
+  letter-spacing: 0.056rem;
+}
+.section-discover__body__card__header__tag {
+  font-size: 1.2rem;
+  padding: 0.5rem 0.5rem 0.8rem;
+  border-radius: 0.4rem;
+  display: inline-block;
+  letter-spacing: 0.048rem;
+  font-family: "Acumin Pro";
+}
+.section-discover__body__card__header__tag svg {
+  width: 1.5rem;
+  height: 1.3rem;
+  position: relative;
+  top: 0.2rem;
+}
+.section-discover__body__card__txt {
+  transition: 0.1s;
+  margin: 0 2rem 1.8rem 2rem;
+  font-family: "Acumin Pro";
+  font-size: 1.7rem;
+  letter-spacing: 0.068rem;
+}
+.section-discover__body__card__reviews {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #707e8c;
+  letter-spacing: 0.056rem;
+  margin-left: 2rem;
+}
+.section-discover__body__card__reviews .rewiewspoint {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #192836;
+  letter-spacing: 0.056rem;
+}
+.section-discover__body__card__reviews .rewiewers {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #707e8c;
+  letter-spacing: 0.056rem;
+}
+.section-discover__body__card__reviews svg {
+  width: 1.5rem;
+  height: 1.3rem;
+  fill: #f5a93e;
+}
+.section-discover__body__card__location {
+  margin-left: 2rem;
+  margin-top: 1.7rem;
+  margin-bottom: 3.1rem;
+  position: relative;
+}
+.section-discover__body__card__location__location {
+  display: inline-block;
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #707e8c;
+  letter-spacing: 0.059rem;
+}
+.section-discover__body__card__location__location svg {
+  width: 1.5rem;
+  height: 1.3rem;
+  fill: #ff5c70;
+}
+.section-discover__body__card__location__location span {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #192836;
+  letter-spacing: 0.059rem;
+}
+.section-discover__body__card__location__fav-icon {
+  display: inline-block;
+  position: absolute;
+  right: 2rem;
+}
+.section-discover__body__card__location__fav-icon svg {
+  width: 1.5rem;
+  height: 1.3rem;
+}
+.section-discover__body__card__location__fav-icon .displayNone {
+  display: none;
+}
+.section-discover__body__card__location__fav-icon .section-discover-fav-icon-solid {
+  fill: #ff5c70;
+}
+
+.popular-categories {
+  text-align: center;
+}
+.popular-categories__header__discover {
+  font-size: 13.2rem;
+  color: rgba(255, 92, 112, 0.1);
+  position: absolute;
+  font-family: "Segoe Script Regular";
+  letter-spacing: 0.528rem;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.popular-categories__header__txt {
+  padding-top: 8rem;
+  margin-bottom: 6rem;
+}
+.popular-categories__header__txt__pop-category {
+  font-size: 2.6rem;
+  letter-spacing: 0.104rem;
+  font-family: "Acumin Pro";
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+.popular-categories__header__txt__find-unique {
+  font-family: "Acumin Pro";
+  font-size: 1.7rem;
+  color: #707e8c;
+  letter-spacing: 0.068rem;
+}
+.popular-categories__body {
+  margin-bottom: 6.7rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3% 3%;
+}
+.popular-categories__body__card {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  padding-top: 2.8rem;
+  text-align: center;
+  border: 0.1rem solid #ffebed;
+  display: inline-block;
+}
+.popular-categories__body__card:hover .popular-categories__body__card__header {
+  color: #ff5c70;
+}
+.popular-categories__body__card:hover {
+  position: relative;
+  top: -1.3rem;
+  box-shadow: 0px 0.7rem 2rem 0 #f2ebec;
+}
+.popular-categories__body__card__header {
+  font-family: "Acumin Pro";
+  font-size: 1.7rem;
+  color: #192836;
+  letter-spacing: 0.068rem;
+  margin-top: 2.8rem;
+  font-weight: normal;
+}
+.popular-categories__body__card__body {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #707e8c;
+  letter-spacing: 0.056rem;
+  margin-bottom: 2.8rem;
+  margin-top: 2rem;
+}
+.popular-categories__body__card__body span {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #ff5c70;
+  letter-spacing: 0.056rem;
+  font-weight: bold;
+}
+
+.subscribe {
+  background-image: linear-gradient(to bottom, rgba(255, 119, 135, 0.2274509804), rgba(179, 51, 66, 0.2274509804)), url("../assets/img/Subscribe/shutterstock-1538803976.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  height: 38rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  text-align: center;
+  color: #fff;
+}
+.subscribe__top-border {
+  left: 1%;
+  width: 98%;
+  border-top: 3rem dotted #fff;
+  position: absolute;
+  transform: translate(0, -1.5rem);
+}
+.subscribe__header {
+  padding-top: 8rem;
+  font-family: "Acumin Pro";
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 0.12rem;
+  font-weight: normal;
+}
+.subscribe__txtbox {
+  width: 63.2rem;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+.subscribe__txtbox p {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 0.056rem;
+}
+.subscribe__input {
+  margin-top: 4rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.subscribe__input__input {
+  border: none;
+  background-color: #eee;
+  outline: none;
+  width: 40rem;
+  display: inline-block;
+  padding: 1.9rem 2rem;
+  font-size: 1.45rem;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  color: rgba(26, 40, 53, 0.5);
+}
+.subscribe__input__button {
+  border: 0.1rem solid #fff;
+  border-radius: 0.4rem;
+  color: #fff !important;
+  background-color: #ff5c70;
+  cursor: pointer;
+  font-family: "Acumin Pro";
+  font-size: 1.7rem;
+  color: #fff;
+  letter-spacing: 0.068rem;
+  display: inline-block;
+  padding: 1.7rem 2rem;
+  border: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  transition: 0.3s;
+}
+.subscribe__input__button:hover {
+  border: 0.1rem solid #ff5c70;
+  border-radius: 0.4rem;
+  background-color: #eee;
+  color: #ff5c70 !important;
+  cursor: pointer;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.subscribe__footer {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 0.056rem;
+  padding-top: 3rem;
+  font-style: italic;
+}
+.subscribe__footer a {
+  text-decoration: none;
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #ff5c70;
+  letter-spacing: 0.056rem;
+  font-style: italic;
+}
+.subscribe__footer a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #192836;
+}
+.footer .gridcontain {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto auto auto;
+  gap: 6rem 5rem;
+}
+.footer .swiperContainer {
+  overflow: hidden;
+}
+.footer__company-slider {
+  padding-top: 6.3rem;
+  padding-bottom: 5.2rem;
+  align-items: center;
+}
+.footer__company-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__gopro {
+  width: 36rem;
+  z-index: 1;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  background-color: #16232e;
+  padding: 3.6rem 3rem 5.6rem 2.9rem;
+  position: relative;
+}
+.footer__gopro__top-border {
+  border-top: 1.3rem dotted #192836;
+  position: absolute;
+  top: 0px;
+  left: 1rem;
+  transform: translate(0, -0.65rem);
+  width: 34rem;
+}
+.footer__gopro__logo {
+  width: 9rem;
+  height: 2.6rem;
+}
+.footer__gopro__txt {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #707e8c;
+  letter-spacing: 0.056rem;
+  margin-bottom: 4rem;
+  margin-top: 2.7rem;
+}
+.footer__gopro__txt span {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #dbe8f4;
+  letter-spacing: 0.056rem;
+}
+.footer__gopro__join-our-community a {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #dbe8f4;
+  letter-spacing: 0.056rem;
+  text-decoration: none;
+}
+.footer__gopro__join-our-community a:hover {
+  text-decoration: underline;
+}
+.footer__gopro__input {
+  position: relative;
+  margin-top: 2rem;
+}
+.footer__gopro__input input {
+  border-style: hidden;
+  width: 100%;
+  background-color: #111b24;
+  border: solid 0.1rem rgba(112, 126, 140, 0.15);
+  border-radius: 0.4rem;
+  padding: 1.7rem 2.5rem 1.6rem 1.3rem;
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: rgba(112, 126, 140, 0.5);
+  letter-spacing: 0.056rem;
+}
+.footer__gopro__input svg {
+  fill: #707e8c;
+  width: 1.3rem;
+  height: 1.3rem;
+  position: absolute;
+  right: 2.5rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.footer__gopro__checkbox {
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+}
+.footer__gopro__checkbox input {
+  border-style: hidden;
+  display: inline-block;
+}
+.footer__gopro__checkbox__txt {
+  font-family: "Acumin Pro";
+  font-size: 1.2rem;
+  color: rgba(112, 126, 140, 0.8);
+  letter-spacing: 0.048rem;
+  display: inline-block;
+  position: relative;
+  top: -0.3rem;
+  left: 0.7rem;
+}
+.footer__gopro__contact-us__header {
+  font-family: "Acumin Pro";
+  font-size: 1.7rem;
+  color: #dbe8f4;
+  letter-spacing: 0.068rem;
+  margin-bottom: 2.8rem;
+  font-weight: normal;
+}
+.footer__gopro__contact-us__location {
+  margin-bottom: 1.4rem;
+}
+.footer__gopro__contact-us__location svg {
+  fill: #ff5c70;
+  width: 1.3rem;
+  height: 1.3rem;
+  display: inline-block;
+  position: relative;
+  top: 0.1rem;
+}
+.footer__gopro__contact-us__location__txt {
+  font-size: 1.4rem;
+  font-family: "Acumin Pro";
+  color: #8f9ca9;
+  display: inline-block;
+  margin-left: 1rem;
+}
+.footer__gopro__contact-us__phonenumber {
+  margin-bottom: 1.4rem;
+}
+.footer__gopro__contact-us__phonenumber svg {
+  fill: #dcc73a;
+  width: 1.3rem;
+  height: 1.3rem;
+  display: inline-block;
+  position: relative;
+  top: 0.1rem;
+}
+.footer__gopro__contact-us__phonenumber__txt {
+  font-size: 1.4rem;
+  font-family: "Acumin Pro";
+  color: #8f9ca9;
+  display: inline-block;
+  margin-left: 1rem;
+}
+.footer__gopro__contact-us__email {
+  margin-bottom: 4rem;
+}
+.footer__gopro__contact-us__email svg {
+  fill: #3a82dc;
+  width: 1.3rem;
+  height: 1.3rem;
+  display: inline-block;
+  position: relative;
+  top: 0.1rem;
+}
+.footer__gopro__contact-us__email__txt {
+  display: inline-block;
+}
+.footer__gopro__contact-us__email__txt a {
+  font-size: 1.4rem;
+  font-family: "Acumin Pro";
+  color: #8f9ca9;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+.footer__gopro__contact-us__social-media {
+  text-align: center;
+  margin-bottom: 3.7rem;
+}
+.footer__gopro__contact-us__social-media ul li {
+  display: inline-block;
+}
+.footer__gopro__contact-us__social-media ul li a svg {
+  margin: 0 1rem;
+  width: 2.1rem;
+  height: 2.1rem;
+}
+.footer__gopro__contact-us__social-media ul li a .instagram {
+  fill: rgba(228, 64, 95, 0.6);
+}
+.footer__gopro__contact-us__social-media ul li a .facebook {
+  fill: rgba(59, 89, 153, 0.6);
+}
+.footer__gopro__contact-us__social-media ul li a .googleplus {
+  fill: rgba(221, 75, 57, 0.6);
+}
+.footer__gopro__contact-us__social-media ul li a .twitter {
+  fill: rgba(85, 172, 238, 0.6);
+}
+.footer__gopro__contact-us__social-media__bottomhr {
+  color: #ffffff;
+  opacity: 0.05;
+  height: 0.1rem;
+  margin-bottom: 5rem;
+}
+.footer__gopro__contact-us__footer {
+  text-align: center;
+  color: #fff;
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+}
+.footer__gopro__contact-us__footer span {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+}
+.footer .footernav {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+}
+.footer__popular-destinations {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin-top: 3.6rem;
+}
+.footer__popular-destinations__header {
+  font-family: "Acumin Pro";
+  font-size: 1.7rem;
+  color: #dbe8f4;
+  letter-spacing: 0.068rem;
+  margin-bottom: 3.2rem;
+  font-weight: normal;
+}
+.footer__popular-destinations__nav ul {
+  width: 45%;
+  display: inline-block;
+}
+.footer__popular-destinations__nav__secondul {
+  position: relative;
+  top: -3.5rem;
+}
+.footer__popular-destinations__nav ul {
+  list-style: none;
+}
+.footer__popular-destinations__nav ul li {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #707e8c;
+  letter-spacing: 0.056rem;
+  margin-bottom: 1.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer__popular-destinations__nav ul li svg {
+  width: 1rem;
+  height: 1rem;
+  fill: #707e8c;
+  transition: 0.3s;
+}
+.footer__popular-destinations__nav ul li:hover {
+  color: #ff5c70;
+  position: relative;
+  left: 0.3rem;
+}
+.footer__popular-destinations__nav ul li:hover svg {
+  fill: #ff5c70;
+}
+.footer__company {
+  margin-top: 3.6rem;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.footer__company sup {
+  background-color: #146ba4;
+  padding: 0.4rem 0.4rem 0.3rem;
+  border-radius: 0.2rem;
+  position: relative;
+  top: -0.3rem;
+  left: 0.1rem;
+  font-family: "Acumin Pro";
+  font-size: 0.9rem;
+  color: #fff;
+  letter-spacing: 0.072rem;
+}
+.footer__company__header {
+  font-family: "Acumin Pro";
+  font-size: 1.7rem;
+  color: #dbe8f4;
+  letter-spacing: 0.068rem;
+  margin-bottom: 3.2rem;
+}
+.footer__company ul {
+  list-style: none;
+}
+.footer__company ul li {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #707e8c;
+  letter-spacing: 0.056rem;
+  margin-bottom: 1.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer__company ul li svg {
+  width: 1rem;
+  height: 1rem;
+  fill: #707e8c;
+  transition: 0.3s;
+}
+.footer__company ul li:hover {
+  color: #ff5c70;
+  position: relative;
+  left: 0.3rem;
+}
+.footer__company ul li:hover svg {
+  fill: #ff5c70;
+}
+.footer__help-support {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  margin-top: 3.6rem;
+}
+.footer__help-support__header {
+  font-family: "Acumin Pro";
+  font-size: 1.7rem;
+  color: #dbe8f4;
+  letter-spacing: 0.068rem;
+  margin-bottom: 3.2rem;
+}
+.footer__help-support ul {
+  list-style: none;
+}
+.footer__help-support ul li {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #707e8c;
+  letter-spacing: 0.056rem;
+  margin-bottom: 1.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer__help-support ul li svg {
+  width: 1rem;
+  height: 1rem;
+  fill: #707e8c;
+  transition: 0.3s;
+}
+.footer__help-support ul li:hover {
+  color: #ff5c70;
+  position: relative;
+  left: 0.3rem;
+}
+.footer__help-support ul li:hover svg {
+  fill: #ff5c70;
+}
+.footer__most-searched {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.footer__most-searched sup {
+  background-color: #db3c50;
+  padding: 0.4rem 0.4rem 0.3rem;
+  border-radius: 0.2rem;
+  position: relative;
+  top: -0.3rem;
+  left: 0.1rem;
+  font-family: "Acumin Pro";
+  font-size: 0.9rem;
+  color: #fff;
+  letter-spacing: 0.072rem;
+}
+.footer__most-searched__header {
+  font-family: "Acumin Pro";
+  font-size: 1.7rem;
+  color: #dbe8f4;
+  letter-spacing: 0.068rem;
+  margin-bottom: 3.2rem;
+}
+.footer__most-searched ul {
+  list-style: none;
+}
+.footer__most-searched ul li {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #707e8c;
+  letter-spacing: 0.056rem;
+  margin-bottom: 1.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer__most-searched ul li svg {
+  width: 1rem;
+  height: 1rem;
+  fill: #707e8c;
+  transition: 0.3s;
+}
+.footer__most-searched ul li:hover {
+  color: #ff5c70;
+  position: relative;
+  left: 0.3rem;
+}
+.footer__most-searched ul li:hover svg {
+  fill: #ff5c70;
+}
+.footer__Media-partner {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.footer__Media-partner sup {
+  background-color: #2a9664;
+  padding: 0.4rem 0.4rem 0.3rem;
+  border-radius: 0.2rem;
+  position: relative;
+  top: -0.3rem;
+  left: 0.1rem;
+  font-family: "Acumin Pro";
+  font-size: 0.9rem;
+  color: #fff;
+  letter-spacing: 0.072rem;
+}
+.footer__Media-partner__header {
+  font-family: "Acumin Pro";
+  font-size: 1.7rem;
+  color: #dbe8f4;
+  letter-spacing: 0.068rem;
+  margin-bottom: 3.2rem;
+}
+.footer__Media-partner ul {
+  list-style: none;
+}
+.footer__Media-partner ul li {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #707e8c;
+  letter-spacing: 0.056rem;
+  margin-bottom: 1.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer__Media-partner ul li svg {
+  width: 1rem;
+  height: 1rem;
+  fill: #707e8c;
+  transition: 0.3s;
+}
+.footer__Media-partner ul li:hover {
+  color: #ff5c70;
+  position: relative;
+  left: 0.3rem;
+}
+.footer__Media-partner ul li:hover svg {
+  fill: #ff5c70;
+}
+.footer__discover {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.footer__discover__header {
+  font-family: "Acumin Pro";
+  font-size: 1.7rem;
+  color: #dbe8f4;
+  letter-spacing: 0.068rem;
+  margin-bottom: 3.2rem;
+}
+.footer__discover ul {
+  list-style: none;
+}
+.footer__discover ul li {
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  color: #707e8c;
+  letter-spacing: 0.056rem;
+  margin-bottom: 1.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer__discover ul li svg {
+  width: 1rem;
+  height: 1rem;
+  fill: #707e8c;
+  transition: 0.3s;
+}
+.footer__discover ul li:hover {
+  color: #ff5c70;
+  position: relative;
+  left: 0.3rem;
+}
+.footer__discover ul li:hover svg {
+  fill: #ff5c70;
+}
+.footer__footer {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  height: 6.5rem;
+}
+.footer__footer hr {
+  width: 115.5%;
+  position: relative;
+  left: -20%;
+  z-index: 0;
+  opacity: 0.05;
+  padding: 0px;
+}
+.footer__footer__body {
+  position: relative;
+  left: -3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__footer__body__nav {
+  margin: 2.5rem 0;
+  color: #707e8c;
+}
+.footer__footer__body__nav ul li {
+  display: inline-block;
+}
+.footer__footer__body__nav ul li a {
+  text-decoration: none;
+  color: #707e8c;
+  font-family: "Acumin Pro";
+  font-size: 1.4rem;
+  letter-spacing: 0.056rem;
+  margin-right: 2rem;
+  display: inline-block;
+}
+.footer__footer__body__asd {
+  margin-top: 1.3rem;
+}
+.footer__footer__body__asd__lang {
+  display: inline-block;
+  color: rgba(112, 126, 140, 0.4);
+  font-size: 1.45rem;
+  border: solid 0.1rem rgba(255, 235, 237, 0.09);
+  border-radius: 0.4rem;
+  padding: 0.4rem 0.9rem 0.8rem 1.3rem;
+  font-family: "Acumin Pro";
+  margin-right: 1.3rem;
+  position: relative;
+}
+.footer__footer__body__asd__lang__dropbox {
+  background-color: #192836;
+  padding: 0.55rem 1rem;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  display: none;
+}
+.footer__footer__body__asd__lang__dropbox div {
+  font-family: "Acumin Pro";
+  font-size: 1.45rem;
+  color: rgba(112, 126, 140, 0.4);
+  letter-spacing: 0.058rem;
+  padding: 0.55rem 0;
+}
+.footer__footer__body__asd__lang__dropbox hr {
+  position: relative;
+  left: 5%;
+  width: 90%;
+  margin: 0.55rem 0;
+  border: none;
+  padding: 0.1rem;
+  background-color: #ffffff;
+}
+.footer__footer__body__asd__lang:hover .footer__footer__body__asd__lang__dropbox {
+  display: block;
+}
+.footer__footer__body__asd__lang:hover {
+  top: -150%;
+}
+.footer__footer__body__asd__usd {
+  position: relative;
+  display: inline-block;
+  color: rgba(112, 126, 140, 0.3);
+  font-size: 1.45rem;
+  border: solid 0.1rem rgba(255, 235, 237, 0.09);
+  border-radius: 0.4rem;
+  padding: 0.4rem 0.9rem 0.8rem 1.3rem;
+  font-family: "Acumin Pro";
+  margin-right: 1.3rem;
+}
+.footer__footer__body__asd__usd__dropbox {
+  background-color: #192836;
+  padding: 0.55rem 1rem;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  display: none;
+}
+.footer__footer__body__asd__usd__dropbox div {
+  font-family: "Acumin Pro";
+  font-size: 1.45rem;
+  color: rgba(112, 126, 140, 0.4);
+  letter-spacing: 0.058rem;
+  padding: 0.55rem 0;
+}
+.footer__footer__body__asd__usd__dropbox hr {
+  position: relative;
+  left: 5%;
+  width: 90%;
+  margin: 0.55rem 0;
+  border: none;
+  padding: 0.1rem;
+  background-color: #ffffff;
+}
+.footer__footer__body__asd__usd:hover .footer__footer__body__asd__usd__dropbox {
+  display: block;
+}
+.footer__footer__body__asd__usd:hover {
+  top: -150%;
+}
+.footer__footer__body__asd svg {
+  width: 2rem;
+  height: 2rem;
+  fill: rgba(112, 126, 140, 0.3);
+}
+
+.message-box {
+  z-index: 3;
+  position: fixed;
+  right: 5rem;
+  bottom: 5rem;
+}
+.message-box__hover-icon {
+  z-index: 1;
+  background-color: #0169ba;
+  padding: 2rem;
+  border-radius: 50%;
+  transition: 0.15s;
+}
+.message-box__hover-icon:hover {
+  padding: 3rem;
+  right: 4.5rem;
+  bottom: 4.5rem;
+  box-shadow: 3px 3px 9px rgba(94, 94, 94, 0.685);
+}
+.message-box__container {
+  width: 30rem;
+  height: 40rem;
+  display: none;
+}
+.message-box__header {
+  text-align: center;
+  background-color: #0169ba;
+  padding: 1rem 0;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+.message-box__header img {
+  width: 3rem;
+}
+.message-box__body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: #fff;
+}
+.message-box__body::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: #eaeaea;
+}
+.message-box__body::-webkit-scrollbar-thumb {
+  background-color: #a0a0a0;
+  border-radius: 1rem;
+}
+.message-box__body::-webkit-scrollbar-thumb:hover {
+  background-color: #7d7d7d;
+}
+.message-box__body__msg {
+  position: relative;
+  background-color: rgb(224, 224, 224);
+  width: 70%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  height: auto;
+}
+.message-box__body__msg p {
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+.message-box__body__right-msg {
+  float: right;
+  transform: translate(-1rem, 0);
+}
+.message-box__body__right-msg__right-arrow {
+  border-color: transparent transparent transparent rgb(224, 224, 224);
+  border-style: solid;
+  border-width: 1rem;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translate(99%, -50%);
+}
+.message-box__body__left-msg__left-arrow {
+  border-color: transparent rgb(224, 224, 224) transparent transparent;
+  border-style: solid;
+  border-width: 1rem;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translate(-99%, -50%);
+}
+.message-box__user-input {
+  background-color: #fff;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.message-box__user-input input {
+  width: 90%;
+  outline: none;
+  border: none;
+  background-color: rgba(112, 126, 140, 0.062745098);
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  margin: 1rem 0 1rem 1rem;
+}
+.message-box__user-input__btn {
+  border-radius: 50%;
+  background-color: #0169ba;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 1rem;
+  position: relative;
+}
+.message-box__user-input__btn svg {
+  fill: #fff;
+  width: 1.3rem;
+  height: 1.3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1600px) {
+  * {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  * {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  * {
+    font-size: 7px;
+  }
+}
+@media screen and (max-width: 768px) {
+  * {
+    font-size: 6px;
+  }
+
+  .main-header__menu-small-screen {
+    display: block !important;
+  }
+
+  #main-header-big-screen {
+    display: none;
+    position: absolute;
+    width: 33%;
+    background-color: #192836;
+    right: 0px;
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+  #main-header-big-screen img {
+    display: none;
+  }
+  #main-header-big-screen nav ul {
+    text-align: center;
+  }
+  #main-header-big-screen nav ul li {
+    display: block;
+  }
+  #main-header-big-screen .main-header__en-eur {
+    margin: auto;
+    display: block;
+    width: 50%;
+  }
+  #main-header-big-screen .Sign-in-or-Register {
+    display: block;
+  }
+  #main-header-big-screen .main-header__add-a-listing {
+    display: block;
+    width: 50%;
+    margin: auto;
+  }
+
+  .main-header__section__icons {
+    display: none;
+  }
+
+  #search {
+    transform: translate(0, 27%);
+  }
+  #search .search {
+    display: block;
+  }
+  #search .search div {
+    margin-top: 2rem;
+    display: block;
+  }
+
+  .explore__body__card {
+    flex: 100%;
+    margin: 0px !important;
+  }
+
+  .section-discover__btns {
+    display: none;
+  }
+
+  .popular-categories__body {
+    grid-template-columns: 47% 47%;
+  }
+
+  .subscribe {
+    margin-top: 15rem;
+  }
+
+  .footer .gridcontain {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    gap: 6rem 5rem;
+  }
+  .footer__gopro {
+    width: 100%;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .footer__gopro__top-border {
+    left: 1%;
+    width: 98%;
+    border-width: 2.3rem;
+    transform: translate(0, -1.15rem);
+  }
+  .footer .footernav {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 2rem 1rem;
+  }
+  .footer__popular-destinations {
+    text-align: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .footer__company {
+    text-align: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .footer__help-support {
+    text-align: center;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .footer__most-searched {
+    text-align: center;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .footer__Media-partner {
+    text-align: center;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .footer__discover {
+    text-align: center;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .footer__footer {
+    text-align: center;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .footer__footer hr {
+    width: 100%;
+    left: 0px;
+  }
+  .footer__footer__body {
+    left: 0px;
+  }
+
+  .message-box__hover-icon {
+    z-index: 1;
+    padding: 2rem 0;
+    transition: 0.2s;
+  }
+  .message-box__hover-icon img {
+    position: relative;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .message-box__hover-icon:hover {
+    padding: 3rem 1rem;
+    right: 4rem;
+    bottom: 4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  #main-header-big-screen {
+    width: 100%;
+  }
+
+  .popular-categories__body__card img {
+    width: 7rem;
+  }
+
+  .footer__gopro__logo img {
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */

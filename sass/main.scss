@@ -1,0 +1,1563 @@
+$colorDarkBlue: #192836;
+$colorWhite: #fff;
+$colorRed: #ff5c70;
+$colorLightPink: #ffebed;
+
+$searchIcon: url("../assets/Icons/magnifying-glass-solid.svg");
+$calendarIcon: url("../assets/Icons/calendar.svg");
+$workersTeamIcon: url("../assets/Icons/workers-team.svg");
+
+
+@font-face {
+    font-family: 'Acumin Pro';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Acumin Pro'), url('../assets/fontfamily/Acumin-RPro.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Acumin Pro Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Acumin Pro Italic'), url('../assets/fontfamily/Acumin-ItPro.woff') format('woff');
+    }
+
+
+@font-face {
+    font-family: 'Acumin Pro Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Acumin Pro Bold'), url('../assets/fontfamily/Acumin-BdPro.woff') format('woff');
+}
+
+
+
+@font-face {
+    font-family: 'Segoe Script Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe Script Regular'), url('../assets/fontfamily/Segoe\ Script.woff') format('woff');
+    }
+    
+
+@mixin clearfix {
+    content: "";
+    clear: both;
+    display: block;
+}
+@mixin txt($fontSize, $color, $letter-spacing){
+    font-family: 'Acumin Pro';
+    font-size: $fontSize;
+    color: $color;
+    letter-spacing: $letter-spacing;
+}
+@mixin container(){
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        @media (min-width: 576px) {
+          width: 540px;
+        }
+      
+        @media (min-width: 768px) {
+          width: 720px;
+        }
+      
+        @media (min-width: 992px) {
+          width: 960px;
+        }
+      
+        @media (min-width: 1200px) {
+          width: 1140px;
+        }
+      
+
+}
+@mixin btn-outline-danger($bgColor){
+    border: 0.1rem solid $colorRed;
+    border-radius: 0.4rem;
+    background-color: $bgColor;
+    color: $colorRed !important;
+    cursor: pointer;
+}
+@mixin btn-danger{
+    border: 0.1rem solid $colorWhite;
+    border-radius: 0.4rem;
+    color: $colorWhite !important;
+    background-color: $colorRed;
+    cursor: pointer;
+}
+@mixin supInfoBox ($bgColor){
+    background-color: $bgColor;
+    padding: 0.4rem 0.4rem 0.3rem;
+    border-radius: 0.2rem;
+    position: relative;
+    top: -0.3rem;
+    left: 0.1rem;
+    @include  txt(0.9rem,$colorWhite, 0.072rem);
+}
+@mixin gridstartend($rs,$rf,$cs,$cf) {
+    grid-row-start: $rs;
+    grid-row-end: $rf;
+    grid-column-start: $cs;
+    grid-column-end: $cf;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+.clearfix{
+    ::after{
+        @include clearfix();
+    }
+}
+.container{
+    @include container();
+}
+
+.main-header{
+    background-color: $colorDarkBlue;
+    text-align: right;
+    @include clearfix;
+    .container{
+        @include container();
+        z-index: 1;
+    }
+    .Logo{
+        position: absolute;
+        left: 0;
+        margin-top: calc(4rem - 11px);
+    }
+    &__menu-small-screen{
+        display: none !important;
+        @include clearfix();
+        height: 8rem;
+        position: relative;
+        img{
+            position: absolute;
+            left: 10% !important;
+        }
+        svg{
+            position: absolute;
+            right: 10%;
+            height: 50%;
+            fill: $colorWhite;
+            margin-top: 2rem;
+        }
+        
+    }
+    
+    &__nav{
+        display: inline-block;
+        ul{
+            li{
+                a{
+                    @include txt(1.7rem,$colorWhite,0.068rem);
+                    text-decoration: none;
+                }
+                padding: calc(4rem - (0.85rem * 1.2)) 0;
+                display: inline-block;
+                margin-right: 3rem;
+                transition: .3s;
+                &:hover{
+                    color: $colorRed;
+                    border-bottom: 0.1rem solid $colorRed;
+                    padding: calc(4rem - (0.85rem * 1.2)) 0 calc(4rem - (0.85rem * 1.2) - 0.05rem) 0;
+                }
+                .chevron-right-icon{
+                    fill: #c4c4c4;
+                    width: 1rem;
+                    height: 1rem;
+                    display: inline-block;
+                }
+                }
+            }
+            &__sup{           
+                @include supInfoBox(#2a9664);
+        }
+       
+    }
+    &__en-eur{
+        display: inline-block;
+        margin: calc(4rem - (0.725rem * 1.2) - 1.1rem - 0.1rem) 0; 
+        background-color: #1c2a38;
+        border: 0.1rem solid $colorLightPink;
+        position: relative;
+        border-radius: 0.4rem;
+        padding: 1.1rem 0.9rem 1.1rem 1rem;
+        @include txt(1.45rem,$colorWhite,0.058rem);
+        z-index: 1;
+        .sort-down-solid-icon{
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            fill: $colorWhite;
+            position: relative;
+            top: -0.4rem;
+        }
+        &__dropbox{
+            div{
+                @include txt(1.45rem,$colorWhite,0.058rem);
+                padding: 0.55rem 0;
+            }
+            background-color: #1c2a38;
+            hr{
+                position: relative;
+                left: 5%;
+                width: 90%;
+                margin: 0.55rem 0;
+                border: none;
+                padding: 0.05rem;
+                background-color: #707e8c;
+            }
+            padding: 0.55rem 1rem;
+            width: calc(100% + 0.2rem);
+            position: absolute;
+            left: 50%;
+            transform: translate(-50% , 0);
+            text-align: center;
+            border-bottom-left-radius: 0.4rem;
+            border-bottom-right-radius: 0.4rem;
+            border: 0.1rem solid $colorLightPink;
+            border-top: none;
+            display: none;
+        }
+        &:hover &__dropbox{
+            display: block;
+        }
+    }
+
+    .Sign-in-or-Register{
+        display: inline-block;
+        margin: calc(4rem - (0.7rem * 1.2)) 1.5rem;
+       
+        a{
+            transition: .2s;
+            @include txt(1.4rem,$colorWhite,0.056rem);
+            text-decoration: none;
+        }
+        
+    }
+    
+    .Sign-in-or-Register:hover{
+        a{
+            color: $colorRed;
+        }
+    }
+    &__add-a-listing{
+        @include btn-outline-danger($colorDarkBlue);
+        padding: 1.7rem 2.2rem;
+        display: inline-block;
+        margin: calc(4rem - (0.7rem * 1.2) - 1.7rem - 0.1rem) 0px;
+        @include txt(1.4rem,$colorWhite,0.056rem);
+        transition: .25s;
+        &:hover{
+            @include btn-danger();
+            .location-dot-solid-icon{
+                fill: $colorWhite;
+            }
+        }
+        .location-dot-solid-icon{
+            fill: $colorRed;
+            width: 1.2rem;
+            height: 1.2rem;
+            display: inline-block;
+        }
+    }
+    &__section{
+        height: 47rem;
+        background-image: linear-gradient(to bottom right, rgba(82, 82, 82, 0.7),rgba(22, 22, 22, 0.7)), url("../assets/img/HeaderBg/business-logistic-concept-import-export-concept.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        color: $colorWhite;
+        position: relative;
+        text-align: center;
+        &__txt{
+            position: relative;
+            top: 50%;
+            transform: translate(0, calc(-50% - 4.5rem));
+        }
+        .book-unforgettable{
+            font-family: "Acumin Pro Bold";
+            font-size: 4rem;
+            letter-spacing: 0.16rem;
+            margin-bottom: 3rem;
+        }
+        .join-dining{
+            @include txt(1.65rem,$colorWhite,0.066rem);
+            &__experiances{
+                font-style: italic;
+                text-decoration: underline;
+                font-size: 1.65rem;
+                font-family: "Acumin Pro Italic";
+            }
+            &__countries{
+                font-size: 1.65rem;
+                color: $colorRed;
+            }
+        }
+        &__icons{
+            position: absolute;
+            right: 4.6rem;
+            bottom: 8rem;
+            &__fc{
+                margin-top: 0px;
+            }
+            ul li{
+                list-style: none;
+            }
+            svg{
+                fill:#b7b7b7;
+                width: 2.6rem;
+                height: 2.6rem;
+                display: block;
+                margin-top: 3.1rem;
+                transition: .3s;
+            }
+
+            .instagram:hover{
+                fill: rgba(228, 64, 95, 1);
+            }
+            .facebook:hover{
+                fill: rgba(59, 89, 153, 1);
+            }
+            .googleplus:hover{
+                fill: rgba(221, 75, 57, 1);
+            }
+            .twitter:hover{
+                fill: rgba(85, 172, 238, 1);
+            }
+        }
+        
+
+    }
+}
+
+//search
+@mixin inputIcon ($icon){
+    background: $icon no-repeat;
+    background-size: 1.7rem;
+    background-position-y: 70%;
+    background-position-x:  90%;
+}
+.search{
+    border: solid 0.1rem $colorLightPink;
+    border-radius: 0.4rem;
+    padding: 4rem;
+    position: relative;
+    transform: translate(0, -50%);
+    background-color: $colorWhite;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__flex-item{
+        margin-right: 1.5rem;
+        label{
+            @include txt(1.4rem,#192836,0.056rem);
+            display: block;
+            margin-bottom: 2rem;
+        }
+        input{
+            outline: none;
+            width: 100%;
+            border: 0.1rem solid $colorRed;
+            border-radius: 0.4rem;
+            height: 6.4rem;
+            padding: 2.4rem;
+            opacity: 0.5;
+            @include txt(1.4rem,#707e8c,0.056rem);
+            &:focus{
+                background-color: #ff5f6f17;
+
+            }
+        }
+    }
+    .waylf{
+        flex: 29%;
+        @include inputIcon($searchIcon);
+    }
+    .waya{
+        flex: 25%;
+        @include inputIcon($calendarIcon);
+        background: $calendarIcon no-repeat;
+        background-size: 1.7rem;
+        background-position-y: 70%;
+        background-position-x:  90%;
+    }
+    .hmgag{
+        flex: 25%;
+        @include inputIcon($workersTeamIcon);
+        background-size: 2.5rem !important;
+    }
+    &__btn{
+        flex: auto;
+        margin-top: 3.7rem;
+        font-family: "Acumin Pro";
+        font-size: 1.7rem;
+        letter-spacing: 0.068rem;
+        height: 6.4rem;
+        padding: 2.5rem 4rem;
+        @include btn-danger();
+        transition: .2s;
+        &:hover{
+            @include btn-outline-danger($colorWhite);
+        }
+    }
+}
+
+//explore
+@mixin exploreTxt {
+    font-size: 2.4rem;
+    letter-spacing: 0.048rem;
+    font-weight: bold;
+    font-family: "Acumin Pro";
+}
+
+.explore{
+    &__txt{
+        @include exploreTxt();
+        span{
+            @include exploreTxt();
+            color: $colorRed;
+        }
+    }
+    &__body{
+        margin-top: 4rem;
+        margin-bottom: 8rem;
+        display: flex;
+        flex-wrap: wrap;
+        &__card{
+        display: flex;
+        flex: 48.6%;
+            &__txt{
+                border: 0.1rem solid #ff5f6f17;
+                border-right: none;
+                background-color: #ff5f6f17;
+                flex: 50%;
+                padding: 3.9rem 2.2rem;
+                &__header{
+                    @include txt(1.7rem, #192836, 0.068rem);
+                    margin: 2.9rem 0 2.4rem 0;
+                }
+                &__body{
+                    @include txt(1.4rem, #707e8c, 0.056rem);
+                    margin-bottom: 2rem;
+                }
+                a{
+                    @include txt(1.4rem, $colorRed, 0.056rem);
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                
+            }
+      
+            &__img{
+                position: relative;
+                flex: 50%;
+                background-color: linear-gradient(to bottom right, #ff5f6f17, $colorWhite);
+                img{
+                    height: 100%;
+                    width: 100%;
+                    display: inline-block;
+                }
+                &__left-border{
+                    height: 98%;
+                    top: 0;
+                    border-left: 1.6rem dotted white;
+                    position: absolute;
+                    transform: translate(-0.8rem,1%);
+                }
+                &__right-border{
+                    height: 98%;
+                    right: 0;
+                    top: 0px;
+                    border-right: 1.6rem dotted white;
+                    position: absolute;
+                    transform: translate(0.8rem,1%);
+                }
+            }
+        }
+        .food-tours{
+            background-color: $colorWhite;
+        }
+    }
+    
+}
+
+//section-discover
+@mixin icons {
+    width: 1.5rem;
+    height: 1.3rem;
+}
+.section-discover{
+
+    background-color: #faf5f5;
+    padding: 8rem 0;
+    &__header{
+        font-family: "Acumin Pro";
+        font-weight: bold;
+        font-size: 2.6rem;
+        letter-spacing: 0.104rem;
+        display: inline-block;
+    }
+    &__btns{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    &__btn{
+        width: 3.3rem;
+        height: 3.3rem;
+        @include btn-outline-danger($colorWhite);
+        border: none;
+        display: inline-block;
+        position: relative;
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0.6rem;
+            height: 1.4rem;
+            
+        }
+        transition: .15s;
+        &:hover{
+            background-color: $colorRed;
+        }
+        &:active{
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 0.15rem;
+            margin-right: 0.15rem;
+        }
+    }
+    #section-discover__btn__right:active {
+        margin-left: 0.15rem;
+    }
+    .swiperContainer{
+        overflow: hidden;
+        margin-top: 4rem;   
+    }
+    &__body{
+        position: relative;
+        &__card{
+            background-color: $colorWhite;
+            border-radius: 0.4rem;
+            &:hover &__txt{
+                color: $colorRed;
+            }
+            &__img{
+                img{
+                    border-top-left-radius: 0.4rem;
+                    border-top-right-radius: 0.4rem;
+                    width: 100%;
+                }
+            }
+            &__header{
+                &__header{
+                    margin: 3rem 1.5rem 2rem 2rem;
+                    display: inline-block;
+                    font-weight: normal;
+                    @include txt(1.4rem, #ef233c, 0.056rem);
+                }
+                &__tag{
+                    font-size: 1.2rem;
+                    padding: 0.5rem 0.5rem 0.8rem;
+                    border-radius: 0.4rem;
+                    display: inline-block;
+                    letter-spacing: 0.048rem;
+                    font-family: "Acumin Pro";
+                    svg{
+                        @include icons();
+                        position: relative;
+                        top: 0.2rem;
+
+                    }
+                }
+            }
+            &__txt{
+                transition: .1s;
+                margin: 0 2rem 1.8rem 2rem;
+                font-family: "Acumin Pro";
+                font-size: 1.7rem;
+                letter-spacing: 0.068rem;
+            }
+            &__reviews{
+                @include txt(1.4rem, #707e8c, 0.056rem);
+                margin-left: 2rem;
+                .rewiewspoint{
+                    @include txt(1.4rem, #192836, 0.056rem);
+                }
+                .rewiewers{
+                    @include txt(1.4rem, #707e8c, 0.056rem);
+                }
+                svg{
+                    @include icons();
+                    fill: #f5a93e;
+                }
+            }
+            &__location{
+                margin-left: 2rem;
+                margin-top: 1.7rem;
+                margin-bottom: 3.1rem;
+                position: relative;
+                &__location{
+                    display: inline-block;
+                    svg{
+                        @include icons();
+                        fill: $colorRed;
+                    }
+                    @include txt(1.4rem, #707e8c, 0.059rem);
+                    span{
+                        @include txt(1.4rem, #192836, 0.059rem);
+                    }
+                }
+                &__fav-icon{
+                    display: inline-block;
+                    position: absolute;
+                    right: 2rem;
+                    svg{
+                        @include icons();
+                    }
+                    .displayNone{
+                        display: none;
+                    }
+                    .section-discover-fav-icon-solid{
+                        fill: $colorRed
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+//most popular categories
+
+.popular-categories{
+    text-align: center;
+    &__header{
+        &__discover{
+            font-size: 13.2rem;
+            color: rgba(255, 92, 112, 0.1);
+            position: absolute;
+            font-family: "Segoe Script Regular";
+            letter-spacing: 0.528rem;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%,0);
+        }
+        &__txt{
+            padding-top: 8rem;
+            margin-bottom: 6rem;
+            &__pop-category{
+                font-size: 2.6rem;
+                letter-spacing: 0.104rem;
+                font-family: "Acumin Pro";
+                font-weight: bold;
+                margin-bottom: 3rem;
+            }
+            &__find-unique{
+                @include txt(1.7rem, #707e8c, 0.068rem);
+            }
+        }
+    }
+    &__body{
+        margin-bottom: 6.7rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 3% 3%;
+        &__card{
+            width:100%;
+            cursor: pointer;
+            border-radius: 0.4rem;
+            padding-top: 2.8rem;
+            text-align: center;
+            border: 0.1rem solid #ffebed;
+            display: inline-block;
+            &:hover &__header{
+                color: #ff5c70;
+            }
+            &:hover{
+                position: relative;
+                top: -1.3rem;
+                box-shadow: 0px 0.7rem 2rem 0 #f2ebec;
+            }
+            &__header{
+                @include txt(1.7rem, #192836, 0.068rem);
+                margin-top: 2.8rem;
+                font-weight: normal
+            }
+            &__body{
+                @include txt(1.4rem, #707e8c, 0.056rem);
+                margin-bottom: 2.8rem;
+                margin-top: 2rem;
+                span{
+                    @include txt(1.4rem, #ff5c70, 0.056rem);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+//subscribe
+.subscribe{
+    background-image: linear-gradient(to bottom, #ff77873a,#b333423a),url("../assets/img/Subscribe/shutterstock-1538803976.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    height: 38rem;
+    object-fit: contain;
+    text-align: center;
+    color: $colorWhite;
+    &__top-border{
+        left: 1%;
+        width: 98%;
+        border-top:3rem dotted $colorWhite;
+        position: absolute;
+        transform: translate(0, -1.5rem);
+    }
+    &__header{
+        padding-top: 8rem;
+        @include txt(3rem, $colorWhite, 0.12rem);
+        font-weight: normal
+    }
+    &__txtbox{
+        p{
+            @include txt(1.4rem, $colorWhite, 0.056rem);
+        }
+        width: 63.2rem;
+        margin: 0 auto;
+        padding-top: 3rem;
+    }
+    &__input{
+        margin-top: 4rem;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        &__input{
+            border: none;
+            background-color: #eee;
+            outline: none;
+            width: 40rem;
+            display: inline-block;
+            padding: 1.9rem 2rem;
+            font-size: 1.45rem;
+            border-top-left-radius: 0.4rem;
+            border-bottom-left-radius: 0.4rem; 
+            color: rgba(26, 40, 53, 0.5);
+        }
+        &__button{
+            @include btn-danger();
+            @include txt(1.7rem, $colorWhite, 0.068rem);
+            display: inline-block;
+            padding: 1.7rem 2rem;
+            border: none;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px; 
+            transition: .3s;
+            &:hover{
+                @include btn-outline-danger(#eee);
+                border-right: none;
+                border-top: none;
+                border-bottom: none;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px; 
+            }
+        }
+    }
+    &__footer{
+        @include txt(1.4rem, $colorWhite, 0.056rem);
+        padding-top: 3rem;
+        font-style: italic;
+        a{
+            text-decoration: none;
+            @include txt(1.4rem, $colorRed, 0.056rem);
+            font-style: italic;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+//footer
+@mixin footerList(){
+    ul{
+        list-style: none;
+        li{
+            @include txt(1.4rem, #707e8c, 0.056rem);
+            margin-bottom: 1.8rem;
+            cursor: pointer;
+            svg{
+                width: 1rem;
+                height: 1rem;
+                fill: #707e8c;
+                transition: .3s;
+            }
+            transition: .3s;
+            &:hover{
+                color: $colorRed;
+                position: relative;
+                left: 0.3rem;
+            }
+            &:hover svg{
+                fill: $colorRed;
+            }
+        }
+    }
+}
+.footer{
+    background-color: #192836;
+    .gridcontain{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto auto auto;
+        gap: 6rem 5rem;
+     
+    }
+    .swiperContainer{
+        overflow: hidden;
+    }
+    &__company-slider{
+        padding-top: 6.3rem;
+        padding-bottom: 5.2rem;
+        align-items: center;
+        .swiper-slide{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    }
+    &__gopro{
+        width: 36rem;
+        z-index: 1;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        background-color: #16232e;
+        padding: 3.6rem 3rem 5.6rem 2.9rem;
+        position: relative;
+        &__top-border{
+            border-top: 1.3rem dotted #192836;
+            position: absolute;
+            top: 0px;
+            left: 1rem;
+            transform: translate(0, -0.65rem);
+            width: 34rem;
+        
+        }
+        &__logo{
+            width: 9rem;
+            height: 2.6rem;
+        }
+        &__txt{
+            @include txt(1.4rem, #707e8c, 0.056rem);
+            margin-bottom: 4rem;
+            margin-top: 2.7rem;
+            span{
+                @include txt(1.4rem, #dbe8f4, 0.056rem);
+            }
+        }
+        &__join-our-community{
+            a{
+                @include txt(1.4rem, #dbe8f4, 0.056rem);
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        &__input{
+            position: relative;
+            margin-top: 2rem;
+            input{
+                border-style: hidden;
+                width: 100%;
+                background-color: #111b24;
+                border: solid 0.1rem rgba(112, 126, 140, 0.15);
+                border-radius: 0.4rem;
+                padding: 1.7rem 2.5rem 1.6rem 1.3rem;
+                @include txt(1.4rem, rgba(112, 126, 140, 0.5), 0.056rem);
+            }
+            svg{
+                fill: #707e8c;
+                width: 1.3rem;
+                height: 1.3rem;
+                position: absolute;
+                right: 2.5rem;
+                top: 50%;
+                transform: translate(0,-50%);
+            }
+        }
+        &__checkbox{
+            margin-top: 1.5rem;
+            margin-bottom: 4rem;
+            input{
+                border-style: hidden;
+                display: inline-block;
+            }
+            &__txt{
+                @include txt(1.2rem, rgba(112, 126, 140, 0.8), 0.048rem);
+                display: inline-block;
+                position: relative;
+                top: -0.3rem;
+                left: .7rem;
+            }
+        }
+        &__contact-us{
+            &__header{
+                @include txt(1.7rem, #dbe8f4, 0.068rem);
+                margin-bottom: 2.8rem;
+                font-weight: normal;
+            }
+            &__location{
+                margin-bottom: 1.4rem;
+                svg{
+                    fill: $colorRed;
+                    width: 1.3rem;
+                    height: 1.3rem;
+                    display: inline-block;
+                    position: relative;
+                    top: 0.1rem;
+                }
+                &__txt{
+                    font-size: 1.4rem;
+                    font-family: "Acumin Pro";
+                    color: #8f9ca9;
+                    display: inline-block;
+                    margin-left: 1rem;
+                }
+            }
+            &__phonenumber{
+                margin-bottom: 1.4rem;
+                svg{
+                    fill: #dcc73a;
+                    width: 1.3rem;
+                    height: 1.3rem;
+                    display: inline-block;
+                    position: relative;
+                    top: 0.1rem;
+                }
+                &__txt{
+                    font-size: 1.4rem;
+                    font-family: "Acumin Pro";
+                    color: #8f9ca9;
+                    display: inline-block;
+                    margin-left: 1rem;
+                }
+            }
+            &__email{
+                margin-bottom: 4rem;
+                svg{
+                    fill: #3a82dc;
+                    width: 1.3rem;
+                    height: 1.3rem;
+                    display: inline-block;
+                    position: relative;
+                    top: 0.1rem;
+                }
+                &__txt{
+                    display: inline-block;
+                    a{
+                        font-size: 1.4rem;
+                        font-family: "Acumin Pro";
+                        color: #8f9ca9;
+                        
+                        margin-left: 1rem;
+                        text-decoration: none;
+                    }
+                }
+            }
+            &__social-media{
+                text-align: center;
+                margin-bottom: 3.7rem;
+                ul li{
+                    a{
+                        svg{
+                            margin: 0 1rem;
+                            width: 2.1rem;
+                            height: 2.1rem;
+                        }
+                        .instagram{
+                            fill: rgba(228, 64, 95, 0.6);
+                        }
+                        .facebook{
+                            fill: rgba(59, 89, 153, 0.6);
+                        }
+                        .googleplus{
+                            fill: rgba(221, 75, 57, 0.6);
+                        }
+                        .twitter{
+                            fill: rgba(85, 172, 238, 0.6);
+                        }
+                    }
+                    display: inline-block;   
+                }
+                &__bottomhr{
+                    color: #ffffff;
+                    opacity: 0.05;
+                    height: 0.1rem;
+                    margin-bottom: 5rem;
+                }
+            }
+            &__footer{
+                text-align: center;
+                color: #fff;
+                font-family: "Acumin Pro";
+                font-size: 1.4rem;
+                span{
+                    font-family: "Acumin Pro";
+                    font-size: 1.4rem; 
+                }
+            }
+
+        }
+    }
+    .footernav{
+        @include gridstartend(1, 3, 2, 3);
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+    }
+    &__popular-destinations{
+        @include gridstartend(1, 2, 1, 2);
+        margin-top: 3.6rem;
+        &__header{
+            @include txt(1.7rem, #dbe8f4, 0.068rem);
+            margin-bottom: 3.2rem;
+            font-weight: normal;
+        }
+        &__nav{
+            ul{
+                width: 45%;
+                display: inline-block;
+            }
+            &__secondul{
+                position: relative;
+                top: -3.5rem;
+            }
+            @include footerList();
+        }
+
+    }
+    &__company{
+        sup{
+            @include supInfoBox(#146ba4);
+        }
+        margin-top: 3.6rem;
+        @include gridstartend(1, 2, 2, 3);
+        &__header{
+            @include txt(1.7rem, #dbe8f4, 0.068rem);
+            margin-bottom: 3.2rem;
+        }
+        @include footerList();
+    }
+    &__help-support{
+        @include gridstartend(1, 2, 3, 4);
+        margin-top: 3.6rem;
+        &__header{
+            @include txt(1.7rem, #dbe8f4, 0.068rem);
+            margin-bottom: 3.2rem;
+        }
+        @include footerList();
+    }
+    &__most-searched{
+        sup{
+            @include supInfoBox(#db3c50);
+        }
+        @include gridstartend(2, 3, 1, 2);
+        &__header{
+            @include txt(1.7rem, #dbe8f4, 0.068rem);
+            margin-bottom: 3.2rem;
+        }
+        @include footerList();
+    }
+    &__Media-partner{
+        sup{
+            @include supInfoBox(#2a9664);
+        }
+        @include gridstartend(2, 3, 2, 3);
+        &__header{
+            @include txt(1.7rem, #dbe8f4, 0.068rem);
+            margin-bottom: 3.2rem;
+        }
+        @include footerList();
+    }
+    &__discover{
+        @include gridstartend(2, 3, 3, 4);
+        &__header{
+            @include txt(1.7rem, #dbe8f4, 0.068rem);
+            margin-bottom: 3.2rem;
+        }
+        @include footerList();
+    }
+    &__footer{
+        @include gridstartend(3, 4, 2, 3);
+        height: 6.5rem;
+        hr{
+            width: 115.5%;
+            position: relative;
+            left: -20%;
+            z-index: 0;
+            opacity: 0.05;
+            padding: 0px;
+        }
+        &__body{
+            position: relative;
+            left: -3rem;
+            display: flex;
+            justify-content: space-between;
+            &__nav{
+                margin: 2.5rem 0;
+                color: #707e8c;
+                ul {
+                
+                    li{
+                        display: inline-block;
+                        a{
+                            text-decoration: none;
+                            color: #707e8c;
+                            font-family: "Acumin Pro";
+                            font-size: 1.4rem;
+                            letter-spacing: 0.056rem;
+                            margin-right: 2rem;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+            &__asd{
+                margin-top: 1.3rem;
+                &__lang{
+                    display: inline-block;
+                    color: rgba(112, 126, 140, 0.4);
+                    font-size: 1.45rem;
+                    border: solid 0.1rem rgba(255, 235, 237, 0.09);
+                    border-radius: 0.4rem;
+                    padding: 0.4rem 0.9rem 0.8rem 1.3rem;
+                    font-family: "Acumin Pro";
+                    margin-right: 1.3rem;
+                    position: relative;
+                    &__dropbox{
+                        div{
+                            @include txt(1.45rem,rgba(112, 126, 140, 0.4),0.058rem);
+                            padding: 0.55rem 0;
+                        }
+                        background-color: #192836;
+                        hr{
+                            position: relative;
+                            left: 5%;
+                            width: 90%;
+                            margin: 0.55rem 0;
+                            border: none;
+                            padding: 0.1rem;
+                            background-color: #ffffff ;
+                        }
+                        padding: 0.55rem 1rem;
+                        width: 100%;
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50% , 0);
+                        text-align: center;
+                        display: none;
+                    }
+                    &:hover &__dropbox{
+                        display: block;
+                    }
+                    &:hover{
+                        top: -150%;
+                    }
+
+                }
+           
+                &__usd{
+                    position: relative;
+                    display: inline-block;
+                    color: rgba(112, 126, 140, 0.3);
+                    font-size: 1.45rem;
+                    border: solid 0.1rem rgba(255, 235, 237, 0.09);
+                    border-radius: 0.4rem;
+                    padding: 0.4rem 0.9rem 0.8rem 1.3rem;
+                    font-family: "Acumin Pro";
+                    margin-right: 1.3rem;
+                    &__dropbox{
+                        div{
+                            @include txt(1.45rem,rgba(112, 126, 140, 0.4),0.058rem);
+                            padding: 0.55rem 0;
+                        }
+                        background-color: #192836;
+                        hr{
+                            position: relative;
+                            left: 5%;
+                            width: 90%;
+                            margin: 0.55rem 0;
+                            border: none;
+                            padding: 0.1rem;
+                            background-color: #ffffff ;
+                        }
+                        padding: 0.55rem 1rem;
+                        width: 100%;
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50% , 0);
+                        text-align: center;
+                        display: none;
+                    }
+                    &:hover &__dropbox{
+                        display: block;
+                    }
+                    &:hover{
+                        top: -150%;
+                    }
+                }
+                svg{
+                    width: 2rem;
+                    height: 2rem;
+                    fill: rgba(112, 126, 140, 0.3);
+                }
+            }
+        }
+    }
+
+}
+
+//message box
+.message-box{
+    z-index: 3;
+    position: fixed;
+        right: 5rem;
+        bottom: 5rem;
+    &__hover-icon{
+        z-index: 1;
+        background-color: #0169ba;
+        padding: 2rem;
+        border-radius: 50%;
+        transition: .15s;
+        &:hover{
+            padding: 3rem;
+            right: 4.5rem;
+            bottom: 4.5rem;
+            box-shadow: 3px 3px 9px rgba(94, 94, 94, 0.685);
+        }
+    }
+    &__container{
+        width: 30rem;
+        height: 40rem;
+        display: none;
+    }
+    &__header{
+        text-align: center;
+        background-color: #0169ba;
+        padding: 1rem 0;
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+        img{
+            width: 3rem;
+        }
+    }
+    &__body{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+            width: 0.5rem; 
+            background-color: #eaeaea; 
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #a0a0a0; 
+            border-radius:1rem ;
+        }
+        &::-webkit-scrollbar-thumb:hover { 
+            background-color: #7d7d7d;
+        }
+        height: 100%;
+        background-color: $colorWhite;
+        &__msg{
+            position: relative;
+            background-color: rgb(224, 224, 224);
+            width: 70%;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+            height: auto;
+            p{
+                padding: 1rem;
+                font-size: 1.6rem;
+                
+            }
+        }
+        &__right-msg{
+            float: right;
+            transform: translate(-1rem , 0);
+            &__right-arrow{
+                border-color:  transparent transparent transparent rgb(224, 224, 224);
+                border-style: solid;
+                border-width: 1rem;
+                width: 0px;
+                height: 0px;
+                position: absolute;
+                right: 0px;
+                top: 50%;
+                transform: translate(99%,-50%);
+            }
+        }
+        &__left-msg{
+            &__left-arrow{
+                border-color:  transparent rgb(224, 224, 224) transparent transparent;
+                border-style: solid;
+                border-width: 1rem;
+                width: 0px;
+                height: 0px;
+                position: absolute;
+                left: 0px;
+                top: 50%;
+                transform: translate(-99%,-50%);
+            }
+        }
+       
+
+    }
+    &__user-input{
+        background-color: $colorWhite;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        input{
+            width: 90%;
+            outline: none;
+            border: none;
+            background-color: #707e8c10;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            margin: 1rem 0 1rem 1rem;
+        }
+        &__btn{
+            border-radius: 50%;
+            background-color: #0169ba;
+            width: 2.5rem;
+            height: 2.5rem;
+            margin: 1rem;
+            position: relative;
+            svg{
+                fill: $colorWhite;
+                width: 1.3rem;
+                height: 1.3rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+           
+        }
+    }
+
+}
+
+@media screen and (max-width: 1600px) {
+    *{
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    *{
+        font-size: 8px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    *{
+        font-size: 7px;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    *{
+        font-size: 6px;
+    }
+    .main-header__menu-small-screen{
+        display: block !important;
+    }
+    #main-header-big-screen{
+        display: none;
+        position: absolute;
+        width: 33%;
+        background-color: $colorDarkBlue;
+        right: 0px;
+        text-align: center;
+        padding-bottom: 3rem;
+        img{
+            display: none;
+        }
+        nav{
+            ul{
+                text-align: center;
+                li{
+                    display: block;
+                }
+            }
+        }
+        .main-header__en-eur{
+            margin: auto;
+            display: block;
+            width: 50%;
+        }
+        .Sign-in-or-Register{
+            display: block;
+        }
+        .main-header__add-a-listing{
+            display: block;
+            width: 50%;
+            margin: auto;
+        }
+    }
+    .main-header__section{
+        &__icons{
+            display: none;
+        }
+    }
+    #search{
+        transform: translate(0, 27%) ;
+        .search{
+            display: block;
+            div{
+                margin-top: 2rem;
+                display: block;
+            }
+        }
+    }
+    .explore__body__card{
+        flex: 100%;
+        margin: 0px !important;
+    }
+    .section-discover__btns{
+        display: none;
+    }
+    .popular-categories{
+        &__body{
+            grid-template-columns: 47% 47%;
+        }
+    }
+    .subscribe{
+        margin-top: 15rem;
+    }
+    .footer{
+        .gridcontain{
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto;
+            gap: 6rem 5rem;
+        }
+        &__gopro{
+            width: 100%;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            &__top-border{
+                left: 1%;
+                width: 98%;
+                border-width: 2.3rem;
+                transform: translate(0, -1.15rem);
+            }
+        }
+        .footernav{
+            @include gridstartend(2,3,1,2);
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 2rem 1rem;
+        }
+        &__popular-destinations{
+            text-align: center;
+            @include gridstartend(1,2,1,2);
+
+        }
+        &__company{
+            text-align: center;
+            @include gridstartend(1,2,2,3);
+        }
+        &__help-support{
+            text-align: center;
+            @include gridstartend(2,3,1,2);
+        }
+        &__most-searched{
+            text-align: center;
+            @include gridstartend(2,3,2,3);
+        }
+        &__Media-partner{
+            text-align: center;
+            @include gridstartend(3,4,1,2);
+        }
+        &__discover{
+            text-align: center;
+            @include gridstartend(3,4,2,3);
+        }
+        &__footer{
+            text-align: center;
+            @include gridstartend(3,4,1,2);
+            hr{
+                width: 100%;
+                left: 0px;
+            }
+            &__body{
+                left: 0px;
+            }
+        }
+
+    }
+    .message-box{
+        &__hover-icon{
+            z-index: 1;
+            padding: 2rem 0; 
+            img{
+                position: relative;
+                width: 50%;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            transition: .2s;
+            &:hover{
+                padding: 3rem 1rem;
+                right: 4rem;
+                bottom: 4rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px){
+    #main-header-big-screen{
+        width: 100%;
+    }
+    .popular-categories{
+        &__body{
+            &__card{
+                img{
+                    width: 7rem;
+                }
+            }
+
+        }
+    }
+    .footer__gopro{
+        &__logo{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="sass/main.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+</head>
+<body>
+    <header class="main-header">
+        <div class="main-header__menu-small-screen">
+            <img src="assets/img/Logo/logo.png" class="Logo" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+        </div>
+        <div class="container" id="main-header-big-screen">
+            <img src="assets/img/Logo/logo.png" class="Logo" alt="">
+            <nav class="main-header__nav">
+                <ul>
+                    <li>
+                        <a href="#">
+                            Gift Cards
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Private Events <svg xmlns="/assets/Icons/chevron-right-solid.svg" class="chevron-right-icon" viewBox="0 0 320 512"> <!--Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. !--><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg>
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="#">
+                            Become a Host<sup class="main-header__nav__sup">NEW</sup>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="main-header__en-eur">
+                EN/EUR
+                <svg xmlns="assets/Icons/sort-down-solid.svg" class="sort-down-solid-icon" viewBox="0 0 320 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M311.9 335.1l-132.4 136.8C174.1 477.3 167.1 480 160 480c-7.055 0-14.12-2.702-19.47-8.109l-132.4-136.8C-9.229 317.8 3.055 288 27.66 288h264.7C316.9 288 329.2 317.8 311.9 335.1z"/></svg>
+                <div class="main-header__en-eur__dropbox">
+                    <hr>
+                    <div>
+                        TR
+                    </div>
+                    <hr>
+                    <div>
+                        GR
+                    </div>
+                </div>
+            </div>
+
+            <div class="Sign-in-or-Register">
+                <a href="#">
+                    Sign in or Register 
+                </a>
+            </div>
+            <div class="main-header__add-a-listing">
+                <svg xmlns="assets/Icons/location-dot-solid.svg" class="location-dot-solid-icon" viewBox="0 0 384 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg>
+                Add a listing
+            </div>
+        </div>
+        <div class="main-header__section">
+            <div class="main-header__section__txt">
+                <h1 class="book-unforgettable">
+                    Book unforgettable culinary experiences
+                </h1>
+                <p class="join-dining">
+                    <span class="join-dining__experiances"> Join dining experiances</span> cooking classes and food tours with locals in <span class="join-dining__countries">130+ countries</span> 
+                </p>
+            </div>
+            <div class="main-header__section__icons">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <svg xmlns="/assets/Icons/instagram-brands.svg" class="instagram main-header__section__icons__fc" viewBox="0 0 448 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg xmlns="/assets/Icons/facebook-f-brands.svg" class="facebook" viewBox="0 0 320 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg xmlns="/assets/Icons/google-plus-g-brands.svg" class="googleplus" viewBox="0 0 640 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg xmlns="/assets/Icons/twitter-brands.svg" class="twitter" viewBox="0 0 512 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section id="search">
+        <div class="container">
+            <div class="search">
+                <div class="search__flex-item waylf">
+                    <label for="">What are you looking for?</label>
+                    <input type="text" placeholder="Search city, host or experience">
+                </div>
+                <div class="search__flex-item waya">
+                    <label for="">When are you available?</label>
+                    <input type="text" placeholder="Select a date">
+                </div>
+                <div class="search__flex-item hmgag">
+                    <label for="">How many guests are going?</label>
+                    <input type="text"  placeholder="Guest">
+                </div>
+                <button class="search__btn">
+                    Search
+                </button>
+            </div>
+        </div>
+    </section>
+    <div class="explore">
+        <div class="container">
+            <div class="explore__txt">
+                Explore <span>DirectoryMaster</span>
+            </div>
+            <div class="explore__body">
+                <div class="explore__body__card">
+                    <div class="explore__body__card__txt">
+                        <img src="assets/img/ExploreImgs/icons-8-waiter-64.png" alt="">
+                        <div class="explore__body__card__txt__header">
+                            Dining experiences
+                        </div>
+                        <div class="explore__body__card__txt__body">
+                            Eatwith gift cards are the perfect present for the food or travel lover in your life!
+                        </div>
+                        <a href="#">Offer a gift card</a>
+                    </div>
+    
+                    <div class="explore__body__card__img">
+                        <div class="explore__body__card__img__left-border" style="border-color:#fff5f6 ;">
+    
+                        </div>
+                        <img src="assets/img/ExploreImgs/modern-mri-machine-room@2x.jpg" alt="">
+                        <div class="explore__body__card__img__right-border">
+    
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="explore__body__card" style="margin-left:2.8rem;">
+                    <div class="explore__body__card__txt food-tours">
+                        <img src="assets/img/ExploreImgs/icons-8-restaurant-menu-64.png" alt="">
+                        <div class="explore__body__card__txt__header">
+                            Food tours
+                        </div>
+                        <div  class="explore__body__card__txt__body">
+                            Whether it's for a celebration or corporate event, we take the hassle out of planning.
+                        </div>
+                        <a href="#">Let us do the hard work</a>
+                    </div>
+    
+                    <div class="explore__body__card__img">
+                        <div class="explore__body__card__img__left-border">
+    
+                        </div>
+                        <img src="assets/img/ExploreImgs/female-doctor-analyzing-mammography-results-x-ray@2x.jpg" alt="">
+                        <div class="explore__body__card__img__right-border">
+    
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-discover">
+        <div class="container">
+            <div class="section-discover__container" id="section-discover">
+                <div class="section-discover__header">
+                    Discover delicious food experiences with hand-selected hosts
+                </div>
+                <div class="section-discover__btns">
+                    <div class="section-discover__btn section-discover__btn__left" id="section-discover__btn__left">
+                        <img src="assets/Icons/chevron-left-solid.svg" alt="">
+                    </div>
+                    <div class="section-discover__btn section-discover__btn__right" id="section-discover__btn__right">
+                        <img src="assets/Icons/chevron-right-solid.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiperContainer">
+                <div class="section-discover__body swiper discoverwiper">
+                    
+                    <div class="swiper-wrapper" id="section-discover__cards">
+    
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div class="popular-categories">
+        <div class="container">
+            <div class="popular-categories__header">
+                <div class="popular-categories__header__discover">
+                    discover
+                </div>
+                <div class="popular-categories__header__txt">
+                    <h1 class="popular-categories__header__txt__pop-category">
+                        Most popular categories
+                    </h1>
+                    <p class="popular-categories__header__txt__find-unique">
+                        Find unique food experiences with hand-selected hosts
+                    </p>
+                </div>
+            </div>
+            <div class="popular-categories__body">
+                <a href="#">
+                    <div class="popular-categories__body__card">
+                        <img src="assets/Icons/icons-8-restaurant-64.png" alt="">
+                        <h3 class="popular-categories__body__card__header">
+                            Food tours
+                        </h3>
+                        <p class="popular-categories__body__card__body">
+                            <span>12</span> Listings
+                        </p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="popular-categories__body__card">
+                        <img src="assets//Icons/icons-8-tableware-64.png" alt="">
+                        <h3 class="popular-categories__body__card__header">
+                            Dining experienecs
+                        </h3>
+                        <p class="popular-categories__body__card__body">
+                            <span>08</span> Listings
+                        </p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="popular-categories__body__card">
+                        <img src="assets/Icons/icons-8-food-and-wine-64.png" alt="">
+                        <h3 class="popular-categories__body__card__header">
+                            Food & drinks
+                        </h3>
+                        <p class="popular-categories__body__card__body">
+                            <span>10</span> Listings
+                        </p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="popular-categories__body__card">
+                        <img src="assets/Icons/icons-8-restaurant-table-64.png" alt="">
+                        <h3 class="popular-categories__body__card__header">
+                            Cooking classes
+                        </h3>
+                        <p class="popular-categories__body__card__body">
+                            <span>15</span> Listings
+                        </p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="popular-categories__body__card">
+                        <img src="assets/Icons/icons-8-paella-64.png" alt="">
+                        <h3 class="popular-categories__body__card__header">
+                            Restaurant
+                        </h3>
+                        <p class="popular-categories__body__card__body">
+                            <span>14</span> Listings
+                        </p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="popular-categories__body__card">
+                        <img src="assets/Icons/icons-8-bar-64.png" alt="">
+                        <h3 class="popular-categories__body__card__header">
+                            Club/Bar
+                        </h3>
+                        <p class="popular-categories__body__card__body">
+                            <span>02</span> Listings
+                        </p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="popular-categories__body__card">
+                        <img src="assets/Icons/icons-8-tapas-64.png" alt="">
+                        <h3 class="popular-categories__body__card__header">
+                            Fitness
+                        </h3>
+                        <p class="popular-categories__body__card__body">
+                            <span>13</span> Listings
+                        </p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="popular-categories__body__card">
+                        <img src="assets/Icons/icons-8-deliver-food-64.png" alt="">
+                        <h3 class="popular-categories__body__card__header">
+                            Rent services
+                        </h3>
+                        <p class="popular-categories__body__card__body">
+                            <span>18</span> Listings
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="subscribe">
+        <div class="subscribe__top-border">
+
+        </div>
+        <div class="container">
+            <h1 class="subscribe__header">
+                Subscribe to the most GoPro newsletter around
+            </h1>
+            <div class="subscribe__txtbox">
+                <p>
+                    We love emails almost as much as we love food. Sign up for free and receive the latest culinary experiences, exclusive offers and other mouthwatering goodies in your inbox.
+                </p>
+            </div>
+            <div class="subscribe__input">
+                <input type="text" class="subscribe__input__input" placeholder="Your email address">
+                <input type="button" class="subscribe__input__button" value="Sign me up!">
+            </div>
+            <p class="subscribe__footer">
+                By signing up, i agree to <a href="#">GoPro’s</a> & conditions.
+            </p>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="swiperContainer">
+                <div class="swipper footerSwiper">
+                    <div class="footer__company-slider swiper-wrapper">
+                        <div class="footer__company-slider__company-icon swiper-slide">
+                            <a href="#">
+                                <img src="assets/img/Footer/mcqueen.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__company-slider__company-icon swiper-slide">
+                            <a href="#">
+                                <img src="assets/img/Footer/flaconi.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__company-slider__company-icon swiper-slide">
+                            <a href="#">
+                                <img src="assets/img/Footer/hunt.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__company-slider__company-icon swiper-slide">
+                            <a href="#">
+                                <img src="assets/img/Footer/sartorius.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__company-slider__company-icon swiper-slide">
+                            <a href="#">
+                                <img src="assets/img/Footer/coffee.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gridcontain">
+                <div class="footer__gopro">
+                    <div class="footer__gopro__top-border">
+                       
+                    </div>
+                    <div class="footer__gopro__logo">
+                        <img src="assets/img/Logo/logo.png" alt="">
+                    </div>
+                    <p class="footer__gopro__txt">
+                        Keep calm and get a special discount for all oders over $50 from The Mountains Coffee. <span> Hurry up! Only 3 days left.</span>
+                    </p>
+                    <div class="footer__gopro__join-our-community">
+                        <a href="#">Join our community</a>
+                    </div>
+                    <div class="footer__gopro__input">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M501.6 4.186c-7.594-5.156-17.41-5.594-25.44-1.063L12.12 267.1C4.184 271.7-.5037 280.3 .0431 289.4c.5469 9.125 6.234 17.16 14.66 20.69l153.3 64.38v113.5c0 8.781 4.797 16.84 12.5 21.06C184.1 511 188 512 191.1 512c4.516 0 9.038-1.281 12.99-3.812l111.2-71.46l98.56 41.4c2.984 1.25 6.141 1.875 9.297 1.875c4.078 0 8.141-1.031 11.78-3.094c6.453-3.625 10.88-10.06 11.95-17.38l64-432C513.1 18.44 509.1 9.373 501.6 4.186zM369.3 119.2l-187.1 208.9L78.23 284.7L369.3 119.2zM215.1 444v-49.36l46.45 19.51L215.1 444zM404.8 421.9l-176.6-74.19l224.6-249.5L404.8 421.9z"/></svg>
+                        <input type="text" placeholder="Your email">
+                    </div>
+                    <div class="footer__gopro__checkbox">
+                        <input type="checkbox">
+                        <div class="footer__gopro__checkbox__txt">
+                            agree to GoPro’s Terms & Conditions.
+                        </div>
+                    </div>
+                    <div class="footer__gopro__contact-us">
+                        <h3 class="footer__gopro__contact-us__header">
+                            Contact us
+                        </h3>
+                        <div class="footer__gopro__contact-us__location">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg>
+                            <div class="footer__gopro__contact-us__location__txt">
+                                Collins Street, Victoria 8007 Australia.
+                            </div>
+                        </div>
+                        <div class="footer__gopro__contact-us__phonenumber">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64H64C28.65 32 0 60.65 0 96zM105.5 303.6l54.24-23.25c6.391-2.766 13.9-.9062 18.24 4.484l22.02 26.91c34.63-17 62.77-45.14 79.77-79.75l-26.91-22.05c-5.375-4.391-7.211-11.83-4.492-18.22l23.27-54.28c3.047-6.953 10.59-10.77 17.93-9.062l50.38 11.63c7.125 1.625 12.11 7.891 12.11 15.22c0 126.1-102.6 228.8-228.7 228.8c-7.336 0-13.6-4.984-15.24-12.11l-11.62-50.39C94.71 314.2 98.5 306.6 105.5 303.6z"/></svg>
+                            <div class="footer__gopro__contact-us__phonenumber__txt">
+                                +56 345 789 000-09
+                            </div>
+                        </div>
+                        <div class="footer__gopro__contact-us__email">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 128C0 92.65 28.65 64 64 64H448C483.3 64 512 92.65 512 128V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V128zM48 128V150.1L220.5 291.7C241.1 308.7 270.9 308.7 291.5 291.7L464 150.1V127.1C464 119.2 456.8 111.1 448 111.1H64C55.16 111.1 48 119.2 48 127.1L48 128zM48 212.2V384C48 392.8 55.16 400 64 400H448C456.8 400 464 392.8 464 384V212.2L322 328.8C283.6 360.3 228.4 360.3 189.1 328.8L48 212.2z"/></svg>
+                            <div class="footer__gopro__contact-us__email__txt">
+                                <a href="#">info@example.com</a>
+                            </div>
+                        </div>
+                        <div class="footer__gopro__contact-us__social-media">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="/assets/Icons/instagram-brands.svg" class="instagram main-header__section__icons__fc" viewBox="0 0 448 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="/assets/Icons/facebook-f-brands.svg" class="facebook" viewBox="0 0 320 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="/assets/Icons/google-plus-g-brands.svg" class="googleplus" viewBox="0 0 640 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z"/></svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="/assets/Icons/twitter-brands.svg" class="twitter" viewBox="0 0 512 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr class="footer__gopro__contact-us__social-media__bottomhr">
+                        <div class="footer__gopro__contact-us__footer">
+                            © 2020 <span style="color:#ff5c70;">GoPro.</span> <span style="color: #707e8c;">Design by</span>  tophive
+                        </div>
+                    </div>
+                </div>
+                <div class="footernav">
+                    <div class="footer__popular-destinations">
+                        <h3 class="footer__popular-destinations__header">
+                            Most popular destinations
+                        </h3>
+                        <div class="footer__popular-destinations__nav">
+                            <ul>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> London</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> New York</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Canada</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Los Angeles</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Amsterdam</li>
+                            </ul>
+                            <ul class="footer__popular-destinations__nav__secondul">
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Barcelona</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Rome</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Italy</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Brazil</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__company">
+                        <h3 class="footer__company__header">
+                            Company
+                        </h3>
+                        <div>
+                            <ul>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Becoma a host</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Private events <sup>OFFER</sup></li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> About us</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Travel agents</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__help-support">
+                        <h3 class="footer__help-support__header">
+                            Help & support
+                        </h3>
+                        <div>
+                            <ul>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> How it works</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> FAQ</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Content us</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__most-searched">
+                        <h3 class="footer__most-searched__header">
+                            Most searched experiences
+                        </h3>
+                        <div>
+                            <ul>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Cooking class in Los Angeles</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Food tour in Rome <sup>HOT</sup></li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Rooftop brunches in New York</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Supper clubs in London</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Canal house dining in Amsterdam</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__Media-partner">
+                        <h3 class="footer__Media-partner__header">
+                            Media partner
+                        </h3>
+                        <div>
+                            <ul>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> News</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Press</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Refer a friend</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Accessibility <sup>NEW</sup></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__discover">
+                        <h3 class="footer__discover__header">
+                            Discover
+                        </h3>
+                        <div>
+                            <ul>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Trust & safety</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Travel credit</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Gift cards</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Business travel</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg> Guide books</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__footer">
+                    <hr>
+                    <div class="footer__footer__body">
+                        <div class="footer__footer__body__nav">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Privacy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Terms
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Cookie Policy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Sitemap
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__footer__body__asd">
+                            <div class="footer__footer__body__asd__lang">
+                               
+                                English
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M311.9 335.1l-132.4 136.8C174.1 477.3 167.1 480 160 480c-7.055 0-14.12-2.702-19.47-8.109l-132.4-136.8C-9.229 317.8 3.055 288 27.66 288h264.7C316.9 288 329.2 317.8 311.9 335.1z"/></svg>
+                                <div class="footer__footer__body__asd__lang__dropbox">
+                                    <hr>
+                                    <div>
+                                        Turkish
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        Germany
+                                    </div>
+
+                                </div>
+                            </div>
+    
+                            <div class="footer__footer__body__asd__usd">
+
+                                USD - $ 
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M311.9 335.1l-132.4 136.8C174.1 477.3 167.1 480 160 480c-7.055 0-14.12-2.702-19.47-8.109l-132.4-136.8C-9.229 317.8 3.055 288 27.66 288h264.7C316.9 288 329.2 317.8 311.9 335.1z"/></svg>
+                                <div class="footer__footer__body__asd__usd__dropbox">
+                                    <hr>
+                                    <div>
+                                        EUR - €
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        TL - ₺
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="message-box">
+        <div class="message-box__hover-icon">
+            <img src="assets/img/MessageBox/icons-8-communication-50.png" alt="">
+        </div>
+        <div class="message-box__container">
+            <div class="message-box__header">
+                <img src="assets/img/MessageBox/icons-8-communication-50.png" alt="">
+            </div>
+            <div class="message-box__body">
+                <div class="message-box__body__msg message-box__body__left-msg">
+                    <div class="message-box__body__left-msg__left-arrow">
+
+                    </div>
+                    <p> 
+                        Hello 
+                    </p>
+                </div>
+                <div class="message-box__body__msg message-box__body__left-msg">
+                    <div class="message-box__body__left-msg__left-arrow">
+
+                    </div>
+                    <p>
+                        How can I help you ? 
+                    </p>
+                </div>
+            </div>
+            <hr style="border: none; padding: 0.05rem 0; background-color: #707e8c;">
+            <div class="message-box__user-input">
+                <input type="text" class="message-box__user-input__txt" placeholder="Write something">
+                <div class="message-box__user-input__btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M501.6 4.186c-7.594-5.156-17.41-5.594-25.44-1.063L12.12 267.1C4.184 271.7-.5037 280.3 .0431 289.4c.5469 9.125 6.234 17.16 14.66 20.69l153.3 64.38v113.5c0 8.781 4.797 16.84 12.5 21.06C184.1 511 188 512 191.1 512c4.516 0 9.038-1.281 12.99-3.812l111.2-71.46l98.56 41.4c2.984 1.25 6.141 1.875 9.297 1.875c4.078 0 8.141-1.031 11.78-3.094c6.453-3.625 10.88-10.06 11.95-17.38l64-432C513.1 18.44 509.1 9.373 501.6 4.186zM369.3 119.2l-187.1 208.9L78.23 284.7L369.3 119.2zM215.1 444v-49.36l46.45 19.51L215.1 444zM404.8 421.9l-176.6-74.19l224.6-249.5L404.8 421.9z"/></svg>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+ 
+</body>
+</html>
